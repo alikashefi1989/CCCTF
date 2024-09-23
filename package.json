@@ -1,6 +1,5 @@
 {
-  "name": "cctf",
-  "private": true,
+  "name": "ccctf",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -25,5 +24,22 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "index.tsx",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alikashefi1989/CCCTF.git"
+  },
+  "keywords": [
+    "country",
+    "country-code",
+    "phone-code"
+  ],
+  "author": "Ali Kashefi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alikashefi1989/CCCTF/issues"
+  },
+  "homepage": "https://github.com/alikashefi1989/CCCTF#readme"
 }
