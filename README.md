@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Convert Country Code To Flag
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+How can install?
 
-Currently, two official plugins are available:
+npm i ccctf
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Usage
 
-## Expanding the ESLint configuration
+The main feature of this library is to create a country's flag using the country's phone code, and other applications such as receiving a list of countries with the same code, receiving the country's code with the country's name, etc.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## example
 
-- Configure the top-level `parserOptions` property like this:
+- code:
 
 ```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+import ccctf from 'ccctf/src/index.ts'
+
+const usFlag = ccctf('us') 
+
+console.log(usFlag)
+
+// '🇺🇸'
+
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+```js
+
+import { gcc } from 'ccctf/src/index.ts'
+
+const usCode = gcc('us') 
+
+console.log(usCode)
+
+// '+1'
+
+```
 
 ```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+import { gcnbc } from 'ccctf/src/index.ts'
+
+const listOfCountriesWithCodeIs_1 = gcnbc('+1') 
+const listOfCountriesWithCodeIs_90 = gcnbc('+90') 
+
+console.log(listOfCountriesWithCodeIs_1)
+console.log(listOfCountriesWithCodeIs_90)
+
+// ['CA', 'US']
+// ['TR']
+
 ```
